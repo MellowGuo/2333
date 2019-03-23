@@ -5,7 +5,7 @@
 	{
 		int an[10][10]={0,0};
 		int amax = 0, amin = 0, ax = 0, ay = 0;
-		int i = 0, j = 0 , k =0;
+		int i = 0, j = 0 , k =0 , s = 0;
 		  srand(time(NULL));
 			for(i=0;i<10;i++)
 			{
@@ -38,16 +38,18 @@
 						//	printf("%d %d\n",amin,k);	
 						} 
 					} 	 
-				//	printf("amax = %d,下标为[%d][%d]\n",amax,ax+1,ay+1);
-				//	printf("amin = %d\n",amin);		
+					printf("amax = %d,下标为[%d][%d]\n",amax,ax+1,ay+1);
+					printf("amin = %d\n",amin);		
 					if(amax == amin)		//判断鞍点并输出
 					{
 						printf("鞍点为%d,其下标为[%d][%d]。\n",amax,ax+1,ay+1);
-					//	break; 
-					 }
-					 else
-					 printf("第%d行没有鞍点\n",i);
-					  printf("\n");
+						s = 1;					 
 			}
+			if(amax != amin)
+			{
+				printf("没有鞍点\n");
+				printf("\n");
+			}
+		}
 		return 0;
 	 } 
